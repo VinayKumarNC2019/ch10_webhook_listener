@@ -3,7 +3,7 @@ var http = require('http');
 var server = http.createServer(function (req, res) {
     req.on('data', function(chunk) {
       console.log("Received notification:");
-      console.log("\t" + chunk.toString());
+      console.log(chunk.toString());
     });
     
     req.on('end', function() {
